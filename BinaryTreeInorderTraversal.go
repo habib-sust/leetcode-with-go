@@ -8,7 +8,9 @@ func inorderTraversal(tree *TreeNode) []int {
 	var inorder func(*TreeNode)
 
 	inorder = func(root *TreeNode) {
-		if root == nil { return }
+		if root == nil {
+			return
+		}
 
 		inorder(root.Left)
 		result = append(result, root.Val)
